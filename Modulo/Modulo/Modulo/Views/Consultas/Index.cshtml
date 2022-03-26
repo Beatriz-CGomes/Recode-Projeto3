@@ -1,0 +1,263 @@
+﻿
+@model IEnumerable<Modulo.Models.Consulta>
+
+<head>
+ <meta charset="UTF-8">
+<title>Trip.com.br</title>
+<link href="~/css/main.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+
+</head>
+
+<header class="menu-principal">
+<main>
+     <div class="header1">
+      <div class="logo">
+     
+        </div>
+     
+       <!--Cabeçalho-->
+
+        <div class="topo">
+    <ul>
+        <li>
+            <a asp-action="Login">
+             <img src="Img/Icon.png" />
+                </a>
+            </li>
+        </ul>
+        </div>
+    </div>
+     
+        <!--FRASE-->
+    <div class="Frase">
+ <b> Precisa mudar a data da sua viagem?    <strong> <a href="">Faça sua solicitação aqui</strong> </a> </b>
+    </div>
+
+</main>
+</header>
+
+<main class="col-100 menu-urls">
+
+    <!--HEADER2-->
+        <!--CATEGORIAS-->
+    <div class="header-2">
+
+  <div class="categorias">
+<ul>
+
+<li>
+  <img src="Img/aviao.png" width="22">
+   <a asp-action="Index">PASSAGENS
+
+  </a>
+</li>
+
+
+<li>
+    <img src="Img/hotel.png" width="15">
+  <a asp-action="Index">HOTÉIS 
+
+
+    </a>
+</li>
+
+
+<li>
+    <img src="Img/mala.png" width="19">
+   <a asp-action="Index">PACOTES
+
+</a>
+</li>
+
+<li>
+    <img src="Img/cru.png" width="24">
+   <a asp-action="Index" asp-controller="Consultas">CRUZEIROS
+
+</a>
+</li>
+
+<li>
+    <img src="Img/onibus.png" width="16">
+   <a asp-action="Index">DAY USE 
+
+    </a>
+
+
+<li>
+    <img src="Img/sale.png" width="18">
+   <a asp-action="Promocao">PROMOÇÕES
+
+    </a>
+</li>
+<li>
+    <img src="Img/contato.png" width="13">
+   <a asp-action="Contato">CONTATOS
+
+    </a>
+    <li>
+        <img src="Img/grupo1.png" width="23">
+       <a asp-action="Index">SOBRE NÓS
+    
+        </a>
+</li>
+</ul>
+</div>
+
+
+
+    <!--BUSCA-->
+
+    <div class="busca">
+        <input placeholder="Buscar" type="text" />
+    </div>
+    <p>
+    <a asp-action="Create">Create New</a>
+</p>
+    <!--FORMULÁRIO-->
+<form action="Confirma" method="POST">
+    <fieldset>
+  
+      <legend>Buscar pacotes </legend>
+
+      <div class="input1">
+  
+      <label for="Origem"><strong>Origem:</label></strong>
+            <input asp-for="Origem" type="text" name="Origem:" placeholder="Origem:" size="30" maxlength=50 required="required"/>
+
+  
+  <label for="Destino"><strong>Destino:</label></strong>
+ <input asp-for="Destino" type="text" name="Destino:" placeholder="Destino:" size="30" maxlenght=50 required="required"/>
+
+
+  
+ <strong><label for="data">Entrada:</label></strong>
+  <input asp-for="Entrada" type = "date" name = "data" />
+
+<strong><label for="data">Saída:</label></strong>
+  <input asp-for="Saida" type = "date" name = "data" />
+
+</div>
+        
+  <br>
+  <div class="input">
+  <input type="submit" name="enviar" value="Enviar"/>
+  <input type="reset"  name="limpar" value="Limpar"/>
+</div>
+  </fieldset>
+  </form>
+  
+</div>
+</main>
+
+
+<!--BanneR CAPA PAI IMAGEM E PARAGRAFO  -->
+
+<div class="pai">
+<div class="imagem">
+<img src="Img/bannercapa1.png" width="750"    /> 
+
+</div>
+<div class="paragrafo">
+<p>Um descontão de pacotes para suas próximas férias </p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Banners BRASIL   HEADER-3 E P  -->
+
+
+
+
+<div class="header-3">
+    <img src="Img/bannerbr.png" width="1000" />
+</div>
+
+
+
+
+
+<strong><p>Pacotes em destaques!!</p></strong>
+
+
+<!--Banners promocioanais   COL-4 -->
+
+<div>
+    <div class="col-4">
+    <img src="Img/text1.png"/> 
+    </div>
+
+    <div class="col-4">
+        <img src="Img/text2.png" /> 
+    </div>
+
+        <div class="col-4">
+            <img src="Img/text1.png" /> 
+        </div>
+
+    <div class="col-4">
+        <img src="Img/text2.png" />
+    </div>
+
+        <div class="col-4">
+            <img src="Img/text2.png" /> 
+        </div>
+
+
+</div>
+
+
+
+
+
+<!--Banners Promocional  COL-6 E FOOTER RODAPÉ -->
+
+
+
+  <div class="col-6">
+    <img src="Img/bannerpro.png" width="500" />
+</div>
+<div class="col-6">
+    <img src="Img/bannerpro.png"  width="500"/>
+</div>
+
+
+<nav id="footer">
+    <ul>
+        <li>
+            <a href="#">Empresa CNPJ 000.0000.00-00/0000</a>
+        </li>
+        <li>
+            <a href="#">Termos de uso</a>
+        </li>
+        <li>
+            <a href="#" >Fale conosco 08000 000 0000</a>
+        </li>
+        <li>
+            <a href="#" >Guia de Segurança</a>
+        </li>
+        <li>
+            <a href="#" >Central de Compras</a>
+        </li>
+     <li>
+            <a href="#" class="favorito"><img src="Img/phone.png" width="19"></a>
+        </li>
+        <li>
+            <a href="#" class="favorito"><img src="Img/wp.png" width="20"></a>
+        </li>
+        <li>
+            <a href="#" class="favorito"><img src="Img/mail.png" width="20"></a>
+        </li>
+    </ul>
+</nav>
